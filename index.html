@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Drift Masters</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/items.css">
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/validations.js"></script>  
+    
+
+
+    <!-- Cargar estilos de fuentes después de cargar los estilos del diseño -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <style>
+        /* Estilos para la pantalla de carga */
+        .loader-wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loader {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .loader img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ocultar contenido hasta que la página esté completamente cargada */
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pantalla de carga -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="assets/img/carga.gif" alt="Cargando...">
+        </div>
+    </div>
+
+    <!-- Contenido de la página -->
+    <div id="content">
+        <!-- Encabezado -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- Código del encabezado -->
+        </nav>
+
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand align-self-center" href="index.html">
+                <img src="assets/img/drift_masters.png" alt="Drift Masters" class="logo">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Fin del Encabezado -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Buscar ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Comienzo del Banner Hero -->
+    <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="./assets/img/drift1.png" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left align-self-center">
+                                <h1 class="h1 text-success"><b>Drift</b> Masters</h1>
+                                <h3 class="h2">Lo mejor en el mundo del Drift</h3>
+                                <p>
+                                    Tu destino número uno para todo lo relacionado con el mundo del 
+                                    drift. En nuestra plataforma, no solo podrás registrar tus productos y encontrar todo lo 
+                                    que necesitas para potenciar tu experiencia de drift.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="./assets/img/drift3.gif" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Drift Masters</h1>
+                                <h3 class="h2">También podrás comprar los mejores equipos</h3>
+                                <p>
+                                    Y accesorios directamente desde la comodidad de tu hogar.
+                                    Desde piezas de rendimiento de última generación hasta productos de estilo y seguridad, 
+                                    estamos aquí para satisfacer todas tus necesidades. ¡Prepárate para llevar tu pasión por el drift al siguiente nivel con Drift Masters!
+                                </p>
+                                <button class="neon-button">Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row p-5">
+                        <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                            <img class="img-fluid" src="./assets/img/drift2.png" alt="">
+                        </div>
+                        <div class="col-lg-6 mb-0 d-flex align-items-center">
+                            <div class="text-align-left">
+                                <h1 class="h1">Drift Masters</h1>
+                                <h3 class="h2"><strong>Lo mejor en el Drift</strong> </h3>
+                                <p>
+                                    En Drift Masters, tu confianza es nuestra prioridad número uno. Nos comprometemos a brindarte una experiencia de compra segura
+                                    y confiable en la que puedas confiar. Con años de experiencia en el mundo del drift y 
+                                    una selección cuidadosamente curada de productos de alta calidad.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <!-- Fin del Banner Hero -->
+
+
+<section>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <h1 class="h1 text-center">Registro de Productos</h1>
+                <form action="javascript:void(0);" method="post" onsubmit="return validarRegistro()">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre del Producto:</label>
+                        <input type="text" class="form-control form-control-lg" id="nombre" name="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoría:</label>
+                        <select class="form-select form-select-lg" id="categoria" name="categoria">
+                            <option value="">Seleccionar categoría</option>
+                            <option value="mantenimiento">Mantenimiento</option>
+                            <option value="reparacion">Reparación</option>
+                            <option value="accesorios">Accesorios</option>
+                            <option value="repuestos">Repuestos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="imagen" class="form-label">Imagen del Producto:</label>
+                        <input type="file" class="form-control form-control-lg" id="imagen" name="imagen">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="form-label">Precio:</label>
+                        <input type="number" class="form-control form-control-lg" id="precio" name="precio">
+                    </div>
+                    <div class="mb-3">
+                        <label for="codigo" class="form-label">Código del Producto:</label>
+                        <input type="text" class="form-control form-control-lg" id="codigo" name="codigo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado" class="form-label">Estado:</label>
+                        <select class="form-select form-select-lg" id="estado" name="estado">
+                            <option value="">Seleccionar estado</option>
+                            <option value="nuevo">Nuevo</option>
+                            <option value="usado">Usado</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nacionalidad" class="form-label">Nacionalidad:</label>
+                        <select class="form-select form-select-lg" id="nacionalidad" name="nacionalidad">
+                            <option value="">Seleccionar nacionalidad</option>
+                            <option value="importado">Importado</option>
+                            <option value="nacional">Nacional</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="marca" class="form-label">Marca de Carro:</label>
+                        <input type="text" class="form-control form-control-lg" id="marca" name="marca">
+                    </div>
+                    <div class="mb-3 d-grid gap-2">
+                        <button type="submit" class="neon-button" onclick="return validarRegistro()">Registrar</button>
+                        <button type="reset" class="neon-button">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Start Brands -->
+   <section class="bg-light py-5">
+    <div class="container my-4">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Nuestras Marcas</h1>
+            </div>
+            <div class="col-lg-9 m-auto tempaltemo-carousel">
+                <div class="row d-flex flex-row">
+                    <!--Controls-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#multi-item-example" role="button" data-bs-slide="prev">
+                            <i class="text-light fas fa-chevron-left"></i>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+
+                    <!--Carousel Wrapper-->
+                    <div class="col">
+                        <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
+                            <!--Slides-->
+                            <div class="carousel-inner product-links-wap" role="listbox">
+
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End First slide-->
+
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Second slide-->
+
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Third slide-->
+
+                            </div>
+                            <!--End Slides-->
+                        </div>
+                    </div>
+                    <!--End Carousel Wrapper-->
+
+                    <!--Controls-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
+                            <i class="text-light fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Brands-->
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-left text-light">
+                        Copyright &copy; 2024 Company Drift Masters
+                        | Designed by <a>Jorge Ramos</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer -->   
+<script>
+    function simularCargaPagina(tiempo) {
+        return new Promise(function(resolve, reject) {
+          setTimeout(function() {
+            resolve('Página cargada');
+          }, tiempo);
+        });
+      }
+      
+      // Llama a la función y realiza acciones cuando la promesa se resuelve
+      simularCargaPagina(2000).then(function(result) {
+        // Muestra el contenido cuando la página se carga
+        document.getElementById('content').style.display = 'block';
+        // Ocultamos el loader
+        document.querySelector('.loader-wrapper').style.display = 'none';
+        // Hacemos visible el cuerpo de la página
+        document.body.style.display = 'block';
+        // Mostramos un mensaje en la consola
+        console.log(result); // Muestra 'Página cargada' en la consola
+      }).catch(function(error) {
+        // Manejamos errores si la promesa es rechazada
+        console.error(error);
+      });
+</script>  
+    <!-- Fin del Producto Destacado -->
+    <!-- Comienzo del Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

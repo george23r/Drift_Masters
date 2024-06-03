@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <head>
+        <title>Drift Masters</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/templatemo.css">
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <link rel="stylesheet" href="assets/css/items.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <style>
+        /* Estilos para la pantalla de carga */
+        .loader-wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loader {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .loader img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ocultar contenido hasta que la página esté completamente cargada */
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pantalla de carga -->
+    <div class="loader-wrapper">
+        <div class="loader">
+            <img src="assets/img/load_shop.gif" alt="Cargando...">
+        </div>
+    </div>
+
+    <!-- Contenido de la página -->
+    <div id="content">
+        <!-- Encabezado -->
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <!-- Código del encabezado -->
+        </nav>
+
+</head>
+<body>
+
+<!-- Encabezado -->
+<nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: white;">
+    <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand align-self-center" href="index.html">
+            <img src="assets/img/drift_masters.png" alt="Drift Masters" class="logo">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Tienda</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- Fin del Encabezado -->
+
+<div class="modal fade" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Buscar Productos</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-row mb-3">
+                    <div class="form-group col-md-4">
+                        <label for="nameFilter">Nombre</label>
+                        <input type="text" class="form-control" id="nameFilter" placeholder="Buscar por Nombre...">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="categoryFilter">Categoría</label>
+                        <select class="form-control" id="categoryFilter">
+                            <option value="">Todas</option>
+                            <option value="Accesorios">Accesorios</option>
+                            <option value="Repuestos">Repuestos</option>
+                            <option value="Reparación">Reparación</option>
+                            <option value="Mantenimiento">Mantenimiento</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="statusFilter">Estado</label>
+                        <select class="form-control" id="statusFilter">
+                            <option value="">Todos</option>
+                            <option value="Nuevo">Nuevo</option>
+                            <option value="Usado">Usado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row mb-3">
+                    <div class="col">
+                        <button type="button" class="neon-button" id="searchButton">Buscar</button>
+                        <button type="button" class="neon-button" id="clearButton">Limpiar</button>
+                    </div>
+                </div>
+                <style>
+                    .loading-gif {
+                        max-width: 100px; /* Ajusta este valor según sea necesario */
+                        height: auto;
+                    }
+                </style>
+                <div id="loadingIndicator" class="text-center d-none">
+                    <img src="assets/img/search.gif" alt="Cargando..." class="img-fluid loading-gif">
+                </div>
+                <table class="table table-striped mt-3">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                            <th>Nacionalidad</th>
+                            <th>Marca de Coche</th>
+                            <th>Código</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                    </tbody>
+                </table>
+                <nav class="d-flex justify-content-center mt-4" id="pagination2">
+                    <ul class="pagination2 justify-content-center">
+                        <!-- Los enlaces de paginación se generarán aquí -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Clean -->
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+    .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+    }
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+    .content {
+        position: relative;
+        z-index: 1;
+        padding-top: 100px; /* Ajusta según la altura del navbar */
+    }
+</style>
+</head>
+<body>
+
+<div class="video-container">
+<!-- Cambia 'video.mp4' al nombre de tu archivo de video y ajusta la ruta -->
+<video autoplay loop muted>
+    <source src="assets/img/0509.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</div>
+
+<div class="content container py-5">
+<div class="row">
+    <style>
+        .info-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .info-box:hover {
+            transform: scale(1.05); /* Aumentar el tamaño al 105% */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Agregar una sombra */
+        }
+        
+        
+        .info-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .info-text {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        
+        .info-badge {
+            display: inline-block;
+            background-color: #ff0000;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 10px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        
+    </style>
+    <div class="col-lg-3">
+        <div class="info-box">
+            <h2 class="info-title">Drift Masters</h2>
+            <p class="info-text">Descubre nuestra exclusiva colección de productos de Drift Masters. ¡Tenemos todo lo que necesitas para dominar el arte del drifting!</p>
+            <span class="info-badge">Variedad: Alta</span>
+            <span class="info-badge">Cantidad: 50+</span>
+        </div>
+    </div>
+    
+    <div class="col-lg-9">
+        <div class="row" id="productCards">
+        <!-- Las tarjetas de productos se generarán aquí -->
+    </div>
+</div>
+<!-- end productos -->
+
+<nav class="d-flex justify-content-center mt-4">
+    <ul class="pagination">
+        <!-- Los enlaces de paginación se generarán aquí -->
+    </ul>
+</nav>
+
+<!-- Footer -->
+<footer>
+     <!-- Start Brands -->
+   <section class="bg-light py-5">
+    <div class="container my-4">
+        <div class="row text-center py-3">
+            <div class="col-lg-6 m-auto">
+                <h1 class="h1">Nuestras Marcas</h1>
+            </div>
+            <div class="col-lg-9 m-auto tempaltemo-carousel">
+                <div class="row d-flex flex-row">
+                    <!--Controls-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#multi-item-example" role="button" data-bs-slide="prev">
+                            <i class="text-light fas fa-chevron-left"></i>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+
+                    <!--Carousel Wrapper-->
+                    <div class="col">
+                        <div class="carousel slide carousel-multi-item pt-2 pt-md-0" id="multi-item-example" data-bs-ride="carousel">
+                            <!--Slides-->
+                            <div class="carousel-inner product-links-wap" role="listbox">
+
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End First slide-->
+
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Second slide-->
+
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_03.png" alt="Brand Logo"></a>
+                                        </div>
+                                        <div class="col-3 p-md-5">
+                                            <a href="#"><img class="img-fluid brand-img" src="assets/img/brand_04.png" alt="Brand Logo"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End Third slide-->
+
+                            </div>
+                            <!--End Slides-->
+                        </div>
+                    </div>
+                    <!--End Carousel Wrapper-->
+
+                    <!--Controls-->
+                    <div class="col-1 align-self-center">
+                        <a class="h1" href="#multi-item-example" role="button" data-bs-slide="next">
+                            <i class="text-light fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Brands-->
+
+<!-- Copyright -->
+<div class="copyright py-4 text-center text-white">
+    <div class="container">
+        <small>Copyright © 2024 Company Drift Masters | Designed by Jorge Ramos</small>
+    </div>
+</div>
+
+</footer>
+
+<script>
+    // Carga de página con una promesa
+const simulatePageLoad = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        document.getElementById('content').style.display = 'block';
+        document.querySelector('.loader-wrapper').style.display = 'none';
+        document.body.style.display = 'block';
+        resolve();
+      }, 2000); // 2000 ms = 2 segundos
+    });
+  };
+  
+  // Llamar a la función de carga de página con una promesa
+  simulatePageLoad().then(() => {
+    // Hacer cualquier otra cosa que necesites después de que la página esté completamente cargada
+  });
+  
+</script>  
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+
+<script src="assets/js/products.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const nameFilter = document.getElementById('nameFilter');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const statusFilter = document.getElementById('statusFilter');
+        const searchButton = document.getElementById('searchButton');
+        const clearButton = document.getElementById('clearButton');
+        const productTableBody = document.getElementById('productTableBody');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const paginationContainer = document.getElementById('pagination2');
+
+        let currentPage = 1;
+        const itemsPerPage = 10;
+
+        // Función para renderizar la tabla de productos
+        function renderProducts(products) {
+            productTableBody.innerHTML = '';
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const paginatedProducts = products.slice(startIndex, endIndex);
+
+            paginatedProducts.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                        <td>${product.name}</td>
+                        <td>${product.category}</td>
+                        <td>${product.price}</td>
+                        <td>${product.status}</td>
+                        <td>${product.nationality}</td>
+                        <td>${product.carBrand}</td>
+                        <td>${product.code}</td>
+                        <td><img src="${product.image}" alt="${product.name}" style="max-width: 100px; max-height: 100px;"></td>
+                    `;
+                    productTableBody.appendChild(row);
+                });
+            }
+
+            // Función para filtrar productos
+            function filterProducts() {
+                const nameValue = nameFilter.value.trim().toLowerCase();
+                const categoryValue = categoryFilter.value;
+                const statusValue = statusFilter.value;
+                const filteredProducts = driftProducts.filter(product => (
+                    (nameValue === '' || product.name.toLowerCase().includes(nameValue)) &&
+                    (categoryValue === '' || product.category === categoryValue) &&
+                    (statusValue === '' || product.status === statusValue)
+                ));
+                return filteredProducts;
+            }
+
+            // Función para calcular el número total de páginas
+            function getTotalPages(filteredProducts) {
+                return Math.ceil(filteredProducts.length / itemsPerPage);
+            }
+
+            // Función para generar los enlaces de paginación
+            function renderPagination(totalPages) {
+                paginationContainer.innerHTML = '';
+                for (let i = 1; i <= totalPages; i++) {
+                    const li = document.createElement('li');
+                    li.classList.add('page-item');
+                    const link = document.createElement('a');
+                    link.classList.add('page-link');
+                    link.href = '#';
+                    link.textContent = i;
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // Esto evita que el navegador siga el enlace
+                        currentPage = i;
+                        const filteredProducts = filterProducts();
+                        renderProducts(filteredProducts);
+                    });
+                    li.appendChild(link);
+                    paginationContainer.appendChild(li);
+                }
+            }
+
+            // Evento para buscar productos
+            searchButton.addEventListener('click', function () {
+                loadingIndicator.classList.remove('d-none');
+                new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        const filteredProducts = filterProducts();
+                        const totalPages = getTotalPages(filteredProducts);
+                        renderProducts(filteredProducts);
+                        // Renderizar paginación
+                        renderPagination(totalPages);
+                        resolve(); 
+                    }, 2000);
+                }).then(() => {
+                    loadingIndicator.classList.add('d-none');
+                });
+            });
+            
+
+            // Evento para limpiar filtros y mostrar todos los productos
+            clearButton.addEventListener('click', function () {
+                nameFilter.value = '';
+                categoryFilter.value = '';
+                statusFilter.value = '';
+                currentPage = 1;
+                const filteredProducts = filterProducts();
+                const totalPages = getTotalPages(filteredProducts);
+                renderProducts(filteredProducts);
+                // Renderizar paginación
+                renderPagination(totalPages);
+            });
+        });
+</script>
+
+<script src="assets/js/validations.js"></script>
+</body>
+</html>
